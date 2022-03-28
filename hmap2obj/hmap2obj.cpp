@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include "lodepng.h"
 #include <vector>
 #include <ctime>
@@ -39,9 +38,7 @@ int main(int argc, char** argv)
 	std::clock_t start;
 	start = std::clock();
 	double duration;
-	string filename = argv[1];
-	string path = ExtractPath(argv[0]);
-	string fullpath = path + filename;
+	string fullpath = argv[1];
 	int precision = 5;
 	unsigned int w = atoi(argv[2]);
 	unsigned int h = atoi(argv[3]);
@@ -98,7 +95,7 @@ int main(int argc, char** argv)
 
 	cout << "Writing obj file...";
 	start = std::clock();
-	string objpath = path + argv[4];
+	string objpath = argv[4];
 	obj_write(O, objpath.c_str(), nullptr, precision);
 	duration = (clock() - start) / (double)CLOCKS_PER_SEC;
 	cout << "done. (" << duration << "s)" << endl;

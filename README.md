@@ -12,16 +12,10 @@ A small and simple C++ CLI tool that converts greyscale heightmaps to 3D OBJ mod
 * extentZ -	Resulting model extent on the Z-axis.
 * maxY    -	White pixels will be mapped to this Y value. All other pixels will be mapped to a value between [0; maxY] according to their greyscale value. A black pixel will always map to Y = 0.
 
-## Example
-### Input PNG
-![Height map of the Grand Canyon](https://raw.githubusercontent.com/emberflare/heightmap2obj/master/example_screenshots/input.png)
-### Output OBJ (opened in Blender)
-![3D model of the Grand Canyon](https://raw.githubusercontent.com/emberflare/heightmap2obj/master/example_screenshots/output.png)
-
 ## Adding Cmake files for easier usage
 Cmake files have been added to compile and use this library
 ### Usage instructions
-```sh
+```bash
 mkdir build
 cd build
 cmake ..
@@ -29,12 +23,12 @@ make
 ```
 
 A shell script file `run.sh` has also been included with a sample code. To use it:
-```sh
+```bash
 sh run.sh # after the above commands have been run successfully
 ```
 
 The shell file looks like this:
-```sh
+```bash
 ./build/hmap2obj/hmap2obj \
 ./example_screenshots/input.png \
 1081 \
@@ -44,3 +38,12 @@ The shell file looks like this:
 2 \
 10
 ```
+
+Further you can use an [online viewer](https://3dviewer.net/) to view the generated obj file.
+
+
+## Example
+### Input PNG
+![Height map of the Grand Canyon](https://raw.githubusercontent.com/emberflare/heightmap2obj/master/example_screenshots/input.png)
+### Output OBJ (opened in Blender)
+![3D model of the Grand Canyon](https://raw.githubusercontent.com/emberflare/heightmap2obj/master/example_screenshots/output.png)

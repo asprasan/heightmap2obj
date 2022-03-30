@@ -15,7 +15,7 @@ A small and simple C++ CLI tool that converts greyscale heightmaps to 3D OBJ mod
 ## Adding Cmake files for easier usage
 Cmake files have been added to compile and use this library
 ### Usage instructions
-```bash
+```sh
 mkdir build
 cd build
 cmake ..
@@ -23,12 +23,12 @@ make
 ```
 
 A shell script file `run.sh` has also been included with a sample code. To use it:
-```bash
-sh run.sh # after the above commands have been run successfully
+```sh
+sh run.sh 
 ```
 
-The shell file looks like this:
-```bash
+The `run.sh` file looks like this:
+```sh
 ./build/hmap2obj/hmap2obj \
 ./example_screenshots/input.png \
 1081 \
